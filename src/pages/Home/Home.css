@@ -1,0 +1,31 @@
+.home-menu-button {
+  margin: 0px 10px;
+  padding: 10px 20px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  position: relative;
+  top: 2px;
+  background-color: #ffddd2;
+  color: white;
+  font-weight: 700;
+  background-origin: padding-box;
+}
+
+.home-menu-button.current-tab {
+  background-color: white;
+  color: #ffddd2;
+  top: 2.2px;
+  border-top: 2px solid #ffddd2;
+  border-left: 2px solid #ffddd2;
+  border-right: 2px solid #ffddd2;
+}
+
+.home-menu {
+  display: flex;
+  border-bottom: 2px solid #ffddd2;
+  margin-top: 20px;
+}
+
+.home-section {
+  padding: 40px;
+}
