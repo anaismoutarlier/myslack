@@ -1,13 +1,17 @@
-import * as reducers from "./reducers";
-import Home from "./pages/Home";
 import "sanitize.css";
+import useFirebase from "./hooks/useFirebase";
 
-//const store = createStore(combineReducers(reducers));
+import Chat from "./pages/Chat";
+import Login from "./pages/Login";
+
+import { FirebaseContext } from "./hooks/useFirebase";
 function App() {
+  const { user, firebase } = useFirebase();
+
   return (
-    <div className="App">
-      <Home />
-    </div>
+    <FirebaseContext.Provider value={ { user, firebase } }>
+      {!user ? <Login /> : <Chat />}
+    </FirebaseContext.Provider>
   );
 }
 
