@@ -5,8 +5,10 @@ import Chat from "./pages/Chat";
 import Login from "./pages/Login";
 
 import { FirebaseContext } from "./hooks/useFirebase";
+import { firebaseConfig } from "./data/firebaseConfig";
+
 function App() {
-  const { user, firebase } = useFirebase();
+  const { user, firebase } = useFirebase(firebaseConfig);
 
   return (
     <FirebaseContext.Provider value={ { user, firebase } }>
