@@ -16,6 +16,7 @@ import {
   collection,
   onSnapshot,
   query,
+  orderBy
 } from "firebase/firestore";
 
 const providers = {
@@ -77,7 +78,7 @@ export default function useFirebase(config) {
 
   const getMessages = handleSnapshot => {
     console.log("get messages")
-    const q = query(collection(db, "messages"));
+    const q = query(collection(db, "messages"), orderBy("createdAt"));
     return onSnapshot(q, handleSnapshot);
   };
   return {
