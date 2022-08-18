@@ -57,7 +57,6 @@ export default function useFirebase(config) {
 
           updateUser(authUser.uid, newUser);
         } else {
-          console.log(user);
           //updateUser(user.uid, { online: false });
         }
         setUser(authUser);
